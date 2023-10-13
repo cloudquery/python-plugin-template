@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "example"
+version = "0.1.0"
+description = ""
+authors = ["Plaintextnerds <tim@plaintextnerds.com>"]
+readme = "README.md"
+packages = [{include = "example"}]
+
+[tool.poetry.dependencies]
+python = "^3.9,<3.13"
+cloudquery-plugin-sdk = "^0.1.5"
+pydantic = "^2.4"
+pyarrow = "^12.0"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
