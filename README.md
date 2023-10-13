@@ -7,12 +7,12 @@ To get started all you need to do is change a few names, define some tables, and
     - Items - A boilerplate table definition
     - ItemResolver - A boilerplate table resolver
  - plugin/example/client.py
-  - ExampleClient - A boilerplate API Client
+     - ExampleClient - A boilerplate API Client
  - plugin/client/client.py
-   - Spec - Defines the CloudQuery Config
-   - Client (uses: ExampleClient) - Wraps your API Client
+    - Spec - Defines the CloudQuery Config
+    - Client (uses: ExampleClient) - Wraps your API Client
  - plugin/plugin.py
-   - ExamplePlugin - The plugin registration / how CloudQuery knows what tables your plugin exposes.
+    - ExamplePlugin - The plugin registration / how CloudQuery knows what tables your plugin exposes.
 
 
 
