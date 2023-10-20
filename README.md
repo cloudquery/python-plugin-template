@@ -2,6 +2,8 @@
 This repo contains everything you need to get started with building a new plugin.
 To get started all you need to do is change a few names, define some tables, and write an API Client to populate the tables.
 
+[![Mastering CloudQuery: How to build a Source Plugin in Python](https://i.ytimg.com/vi/TSbGHz5Z09M/maxresdefault.jpg)](https://youtu.be/TSbGHz5Z09M "Mastering CloudQuery: How to build a Source Plugin in Python")
+
 ## Key files & classes
  - plugin/tables/items.py
     - Items - A boilerplate table definition
@@ -78,3 +80,4 @@ This should result in the creation of a sqlite database `db.sqlite` where you ca
 
 - [Architecture](https://www.cloudquery.io/docs/developers/architecture)
 - [Concepts](https://www.cloudquery.io/docs/developers/creating-new-plugin/python-source)
+- [Video tutorial](https://youtu.be/TSbGHz5Z09M)
