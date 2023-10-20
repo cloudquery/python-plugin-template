@@ -28,7 +28,7 @@ For example:
    {
       "num": {{num}},
       "date": "2023-10-12", 
-      "title": "A simple example"
+      "title": "A simple comics"
    }
    ```
    Then you would design the table class as

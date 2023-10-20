@@ -1,1 +1,1 @@
-from .items import Items
+from .comics import Comics

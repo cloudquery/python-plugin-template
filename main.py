@@ -1,11 +1,11 @@
 import sys
 from cloudquery.sdk import serve
 
-from plugin import ExamplePlugin
+from plugin import XKCDPlugin
 
 
 def main():
-    p = ExamplePlugin()
+    p = XKCDPlugin()
     serve.PluginCommand(p).run(sys.argv[1:])
 
 
