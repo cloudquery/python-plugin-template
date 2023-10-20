@@ -1,0 +1,34 @@
+2023-10-20T10:26:35Z INF Loading spec(s) args=["TestConfig.yaml"] module=cli
+2023-10-20T10:26:35Z INF Plugin server listening address="C:\\Users\\plain\\AppData\\Local\\Temp\\cq-fSaZbARejzSPvyWu.sock" module=cli
+2023-10-20T10:26:36Z INF started call grpc.component=server grpc.method=GetVersions grpc.method_type=unary grpc.service=cloudquery.discovery.v1.Discovery grpc.start_time=2023-10-20T11:26:36+01:00 grpc.time_ms=0.514 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:26:36Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetVersions grpc.method_type=unary grpc.service=cloudquery.discovery.v1.Discovery grpc.start_time=2023-10-20T11:26:36+01:00 grpc.time_ms=1.041 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:26:36Z INF Start sync destinations=["sqlite (v2.4.11)"] module=cli source="comics (grpc@localhost:7777)" sync_time=2023-10-20T10:26:36Z
+2023-10-20T10:26:36Z INF started call grpc.component=server grpc.method=Init grpc.method_type=unary grpc.service=cloudquery.plugin.v3.Plugin grpc.start_time=2023-10-20T11:26:36+01:00 grpc.time_ms=0 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:26:36Z INF finished call grpc.code=OK grpc.component=server grpc.method=Init grpc.method_type=unary grpc.service=cloudquery.plugin.v3.Plugin grpc.start_time=2023-10-20T11:26:36+01:00 grpc.time_ms=0.519 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:26:36Z INF Start fetching resources destinations=["sqlite (v2.4.11)"] module=cli source="comics (grpc@localhost:7777)"
+2023-10-20T10:26:36Z INF started call grpc.component=server grpc.method=Write grpc.method_type=client_stream grpc.service=cloudquery.plugin.v3.Plugin grpc.start_time=2023-10-20T11:26:36+01:00 grpc.time_ms=5.194 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:26:36Z INF Migrating table module=sqlite-dest table=cq_comics
+2023-10-20T10:26:58Z INF End sync destinations=["sqlite (v2.4.11)"] module=cli source="comics (grpc@localhost:7777)" sync_time=2023-10-20T10:26:36Z
+2023-10-20T10:26:58Z INF Sending sync summary to analyticsv1.cloudquery.io:443 module=cli
+2023-10-20T10:26:59Z ERR failed to kill source plugin error="TerminateProcess: Access is denied." module=cli
+2023-10-20T10:26:59Z INF waiting for source plugin to terminate module=cli
+2023-10-20T10:26:59Z INF source plugin process exited with exit status 1 module=cli
+2023-10-20T10:26:59Z ERR exiting with error error="received interrupt signal from OS: failed to sync v3 source comics: unexpected error from sync client receive: rpc error: code = Canceled desc = context canceled" module=cli
+2023-10-20T10:27:50Z INF Loading spec(s) args=["TestConfig.yaml"] module=cli
+2023-10-20T10:27:50Z INF Plugin server listening address="C:\\Users\\plain\\AppData\\Local\\Temp\\cq-VawldnMMdSdHjskd.sock" module=cli
+2023-10-20T10:27:51Z INF started call grpc.component=server grpc.method=GetVersions grpc.method_type=unary grpc.service=cloudquery.discovery.v1.Discovery grpc.start_time=2023-10-20T11:27:51+01:00 grpc.time_ms=0.505 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:27:51Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetVersions grpc.method_type=unary grpc.service=cloudquery.discovery.v1.Discovery grpc.start_time=2023-10-20T11:27:51+01:00 grpc.time_ms=0.505 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:27:51Z INF Start sync destinations=["sqlite (v2.4.11)"] module=cli source="comics (grpc@localhost:7777)" sync_time=2023-10-20T10:27:51Z
+2023-10-20T10:27:51Z INF started call grpc.component=server grpc.method=Init grpc.method_type=unary grpc.service=cloudquery.plugin.v3.Plugin grpc.start_time=2023-10-20T11:27:51+01:00 grpc.time_ms=0 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:27:51Z INF finished call grpc.code=OK grpc.component=server grpc.method=Init grpc.method_type=unary grpc.service=cloudquery.plugin.v3.Plugin grpc.start_time=2023-10-20T11:27:51+01:00 grpc.time_ms=0 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:27:51Z INF Start fetching resources destinations=["sqlite (v2.4.11)"] module=cli source="comics (grpc@localhost:7777)"
+2023-10-20T10:27:51Z INF started call grpc.component=server grpc.method=Write grpc.method_type=client_stream grpc.service=cloudquery.plugin.v3.Plugin grpc.start_time=2023-10-20T11:27:51+01:00 grpc.time_ms=1.075 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:27:51Z INF Migrating table module=sqlite-dest table=cq_comics
+2023-10-20T10:27:51Z INF Table exists, auto-migrating module=sqlite-dest table=cq_comics
+2023-10-20T10:32:25Z INF finished call grpc.code=OK grpc.component=server grpc.method=Write grpc.method_type=client_stream grpc.service=cloudquery.plugin.v3.Plugin grpc.start_time=2023-10-20T11:27:51+01:00 grpc.time_ms=273715.6 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:32:25Z INF started call grpc.component=server grpc.method=Close grpc.method_type=unary grpc.service=cloudquery.plugin.v3.Plugin grpc.start_time=2023-10-20T11:32:25+01:00 grpc.time_ms=0 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:32:25Z INF finished call grpc.code=OK grpc.component=server grpc.method=Close grpc.method_type=unary grpc.service=cloudquery.plugin.v3.Plugin grpc.start_time=2023-10-20T11:32:25+01:00 grpc.time_ms=0.518 module=cli peer.address=@ protocol=grpc
+2023-10-20T10:32:25Z INF End sync destinations=["sqlite (v2.4.11)"] module=cli source="comics (grpc@localhost:7777)" sync_time=2023-10-20T10:27:51Z
+2023-10-20T10:32:25Z INF Sending sync summary to analyticsv1.cloudquery.io:443 module=cli
+2023-10-20T10:32:25Z INF waiting for source plugin to terminate module=cli
+2023-10-20T10:32:25Z INF source plugin process exited with exit status 1 module=cli

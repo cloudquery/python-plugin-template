@@ -1,1 +1,1 @@
-from .plugin import ExamplePlugin
+from .plugin import XKCDPlugin
