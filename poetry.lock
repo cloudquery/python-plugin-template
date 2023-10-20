@@ -188,14 +188,14 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
 name = "cloudquery-plugin-pb"
-version = "0.0.17"
+version = "0.0.18"
 description = "CloudQuery Plugin client and server library"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "cloudquery-plugin-pb-0.0.17.tar.gz", hash = "sha256:df5aab4e7e2762eb20797bd27b98b1ed43db3ae2909780a94b56baa7af719f6c"},
-    {file = "cloudquery_plugin_pb-0.0.17-py2.py3-none-any.whl", hash = "sha256:5a304f8a6f4f0dcd95edd846eeb79ba94b8cc2f865daacc8268c9482840e200b"},
+    {file = "cloudquery-plugin-pb-0.0.18.tar.gz", hash = "sha256:53a9385aa96aeaddd7dbea3f4a43ee710131beb7934bad854703bcac0f81f5d1"},
+    {file = "cloudquery_plugin_pb-0.0.18-py2.py3-none-any.whl", hash = "sha256:790707950570ef6b5da8c294b3817b13dee0893fcc203ba158e3851a9dcdf63a"},
 ]
 
 [package.dependencies]
@@ -206,19 +206,19 @@ pyarrow = ">=12.0.1"
 
 [[package]]
 name = "cloudquery-plugin-sdk"
-version = "0.1.5"
+version = "0.1.6"
 description = "CloudQuery Plugin SDK for Python"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "cloudquery-plugin-sdk-0.1.5.tar.gz", hash = "sha256:20beb954faca1226f1b58291cc3ed9c6ca41fa2b980130ad826274d1405ea527"},
-    {file = "cloudquery_plugin_sdk-0.1.5-py2.py3-none-any.whl", hash = "sha256:beadaacaaea374921e2ff4693cd104d2bb1a6693221659e1e1cd475686d02e44"},
+    {file = "cloudquery-plugin-sdk-0.1.6.tar.gz", hash = "sha256:17aa97aac1dcf9fb5a8713f197ab9a479864b4d482d04f4c47354144ed5f3d52"},
+    {file = "cloudquery_plugin_sdk-0.1.6-py2.py3-none-any.whl", hash = "sha256:b2039ccca93616a1e37350f386813967b483826d3d7439b8dbd42c37e833d54f"},
 ]
 
 [package.dependencies]
 black = "23.9.1"
-cloudquery-plugin-pb = "0.0.17"
+cloudquery-plugin-pb = "0.0.18"
 exceptiongroup = "1.1.3"
 grpcio = "1.59.0"
 grpcio-tools = "1.59.0"
@@ -1069,4 +1069,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9,<3.13"
-content-hash = "c0747616829e580798f3b3004a2e9668cd625e2fae2d84efe7259ed2dc7a2147"
+content-hash = "4af639b266bfbb397b9c5003bef595f945e5722f33d9b4a025b1d30217924248"

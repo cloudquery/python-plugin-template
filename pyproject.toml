@@ -4,14 +4,17 @@ version = "0.1.0"
 description = ""
 authors = ["Plaintextnerds <tim@plaintextnerds.com>"]
 readme = "README.md"
-packages = [{include = "example"}]
+packages = [{include = "plugin"}]
 
 [tool.poetry.dependencies]
 python = "^3.9,<3.13"
-cloudquery-plugin-sdk = "^0.1.5"
+cloudquery-plugin-sdk = "^0.1.6"
 pydantic = "^2.4"
 pyarrow = "^12.0"
 requests = "^2.31.0"
+
+[tool.poetry.scripts]
+main = "main:main"
 
 
 [build-system]

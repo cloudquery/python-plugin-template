@@ -1,0 +1,17 @@
+kind: source
+spec:
+  name: "comics"
+  registry: "grpc"
+  path: "localhost:7777"
+  tables: ['*']
+  destinations: ["sqlite"]
+  spec:
+    base_url: https://xkcd.com
+---
+kind: destination
+spec:
+  name: sqlite
+  path: cloudquery/sqlite
+  version: "v2.4.11"
+  spec:
+    connection_string: ./db.sqlite

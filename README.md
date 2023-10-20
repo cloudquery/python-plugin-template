@@ -59,6 +59,20 @@ Adding these to the CloudQuery config spec can be done by editing the `Spec` `da
 ### Plugin
 Finally, you need to edit the `plugin.py` file to set the plugin name and version, and add the `Tables` to the `get_tables` function. 
 
+### Test run
+To test your plugin you can run it locally.
+
+To automatically manage your virtual environment and install the dependencies listed in the `pyproject.toml` you can use `poetry`.
+Poetry is an improved package & environment manager for Python that uses the standardised `pyproject.toml`, if you don't have it installed you can pull it with `pip install poetry`.
+
+To install the dependencies into a new virtual environment run `poetry install`.
+If you have additional dependencies you can add them with `poetry add {package_name}` which will add them to the `pyproject.toml` and install them into the virtual environment.
+
+Then to run the plugin `poetry run main serve`, which will launch the plugin manually as a GRPC service.
+
+With that running you can adjust the `TestConfig.yaml` to match your plugin and run `cloudquery sync`.
+This should result in the creation of a sqlite database `db.sqlite` where you can validate your tables are as expected.
+
 
 ## Links
 
