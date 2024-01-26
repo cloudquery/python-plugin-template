@@ -12,11 +12,15 @@ from plugin.client import Client, Spec
 
 PLUGIN_NAME = "example"
 PLUGIN_VERSION = "1.0.0"  # {x-release-please-version}
+TEAM_NAME = "cloudquery"
+PLUGIN_KIND = "source"
 
 
 class ExamplePlugin(plugin.Plugin):
     def __init__(self) -> None:
-        super().__init__(PLUGIN_NAME, PLUGIN_VERSION)
+        super().__init__(
+            PLUGIN_NAME, PLUGIN_VERSION, plugin.plugin.Options(team=TEAM_NAME, kind=PLUGIN_KIND)
+        )
         self._spec_json = None
         self._spec = None
         self._scheduler = None
@@ -26,10 +30,10 @@ class ExamplePlugin(plugin.Plugin):
     def set_logger(self, logger) -> None:
         self._logger = logger
 
-    def init(self, spec_bytes, no_connection: bool = False):
+    def init(self, spec, no_connection: bool = False):
         if no_connection:
             return
-        self._spec_json = json.loads(spec_bytes)
+        self._spec_json = json.loads(spec)
         self._spec = Spec(**self._spec_json)
         self._spec.validate()
         self._scheduler = Scheduler(
