@@ -15,11 +15,12 @@ PLUGIN_VERSION = "0.0.1"
 TEAM_NAME = "cloudquery"
 PLUGIN_KIND = "source"
 
-
 class ExamplePlugin(plugin.Plugin):
     def __init__(self) -> None:
         super().__init__(
-            PLUGIN_NAME, PLUGIN_VERSION, plugin.plugin.Options(team=TEAM_NAME, kind=PLUGIN_KIND)
+            PLUGIN_NAME,
+            PLUGIN_VERSION,
+            plugin.plugin.Options(team=TEAM_NAME, kind=PLUGIN_KIND),
         )
         self._spec_json = None
         self._spec = None

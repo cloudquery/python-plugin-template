@@ -1,0 +1,25 @@
+name: Lint with Black
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install dependencies
+        run: |
+          pip3 install --no-cache-dir poetry==2.1.4
+          poetry install --no-interaction --no-ansi --no-root
+      - name: Check formatting
+        run: make fmt-check

@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy requirements.txt and install the Python dependencies
 COPY pyproject.toml .
 COPY poetry.lock .
-RUN pip3 install --no-cache-dir poetry
+RUN pip3 install --no-cache-dir poetry==2.1.4
 RUN poetry install --no-interaction --no-ansi --no-root
 
 # Copy the rest of the code
