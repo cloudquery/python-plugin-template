@@ -8,7 +8,7 @@ WORKDIR /app
 COPY pyproject.toml .
 COPY poetry.lock .
 RUN pip3 install --no-cache-dir poetry
-RUN poetry install --no-dev --no-interaction --no-ansi
+RUN poetry install --no-interaction --no-ansi --no-root
 
 # Copy the rest of the code
 COPY plugin plugin

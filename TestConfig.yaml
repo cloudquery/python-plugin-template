@@ -3,9 +3,10 @@ spec:
   name: "comics"
   registry: "grpc"
   path: "localhost:7777"
-  tables: ['*']
+  tables: ["*"]
   destinations: ["sqlite"]
   spec:
+    access_token: "example"
     base_url: https://xkcd.com
 ---
 kind: destination

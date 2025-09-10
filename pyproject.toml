@@ -7,11 +7,11 @@ readme = "README.md"
 packages = [{include = "plugin"}]
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.14"
-cloudquery-plugin-sdk = "^0.1.12"
-pydantic = "^2.4"
-pyarrow = "^21.0.0"
-requests = "^2.32.2"
+python = ">=3.11,<3.14"
+cloudquery-plugin-sdk = ">=0.1.47"
+pydantic = "^2.11.7"
+pyarrow = "^19.0.1"
+requests = "^2.32.5"
 
 [tool.poetry.scripts]
 main = "main:main"
