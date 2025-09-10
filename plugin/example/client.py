@@ -7,4 +7,4 @@ class ExampleClient:
         self._base_url = base_url
 
     def item_iterator(self, page: int = 1) -> Generator[Dict[str, Any], None, None]:
-        ...
+        yield {"num": 1, "string": "example", "date": "2021-01-01"}
