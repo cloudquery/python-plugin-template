@@ -1,0 +1,30 @@
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - # Required for the package command tests to work
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install dependencies
+        run: |
+          pip3 install --no-cache-dir poetry==2.1.4
+          poetry install --no-interaction --no-ansi --no-root
+      - name: Run tests
+        run: make test
