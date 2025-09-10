@@ -3,6 +3,7 @@ import os
 from cloudquery.sdk import serve
 from plugin import ExamplePlugin
 
+
 def test_plugin_package():
     p = ExamplePlugin()
     cmd = serve.PluginCommand(p)
@@ -50,7 +51,7 @@ def test_plugin_package():
                         "primary_key": False,
                         "not_null": False,
                         "unique": False,
-                    }
+                    },
                 ],
             },
         ]

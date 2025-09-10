@@ -15,6 +15,7 @@ PLUGIN_VERSION = "0.0.1"
 TEAM_NAME = "cloudquery"
 PLUGIN_KIND = "source"
 
+
 class ExamplePlugin(plugin.Plugin):
     def __init__(self) -> None:
         super().__init__(
