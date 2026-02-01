@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{ include = "plugin" }]
 
 [tool.poetry.dependencies]
-python = ">=3.11,<3.14"
+python = ">=3.14,<3.15"
 cloudquery-plugin-sdk = ">=0.1.47"
 pydantic = "^2.11.7"
 pyarrow = "^19.0.1"
