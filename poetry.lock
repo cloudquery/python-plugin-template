@@ -181,14 +181,14 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
 name = "cloudquery-plugin-pb"
-version = "0.0.53"
+version = "0.0.54"
 description = "CloudQuery Plugin client and server library"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "cloudquery_plugin_pb-0.0.53-py2.py3-none-any.whl", hash = "sha256:796235c65f9b6299e3d26969b6af0af6779a11675715b9d77175622746abc609"},
-    {file = "cloudquery_plugin_pb-0.0.53.tar.gz", hash = "sha256:0559885c05cd6f2a5341c492a629b1cad7666e7bb21ef54a8fa24213354956dc"},
+    {file = "cloudquery_plugin_pb-0.0.54-py2.py3-none-any.whl", hash = "sha256:587586ef045f6da70348ca1d2275add2f4e76101d50667f8ebd3a86f6299c4df"},
+    {file = "cloudquery_plugin_pb-0.0.54.tar.gz", hash = "sha256:c17ddcdb959fd6f0d85ec78d3d94f21060d32465ba50fcac4261def03d0a4eee"},
 ]
 
 [package.dependencies]
@@ -199,19 +199,19 @@ pyarrow = ">=13.0.0"
 
 [[package]]
 name = "cloudquery-plugin-sdk"
-version = "0.1.53"
+version = "0.1.54"
 description = "CloudQuery Plugin SDK for Python"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "cloudquery_plugin_sdk-0.1.53-py2.py3-none-any.whl", hash = "sha256:c8ad895cd60a61974d30e5daa7938fd6b36eef5da1292d202699c9d25339e813"},
-    {file = "cloudquery_plugin_sdk-0.1.53.tar.gz", hash = "sha256:fd20bfff4d6dd116f42445280eb7c43d7f208c924085b20babf082add237bf66"},
+    {file = "cloudquery_plugin_sdk-0.1.54-py2.py3-none-any.whl", hash = "sha256:50cf7a319ba59544b8bf67b6bbadb4e955fb6d0bfe4fdcb23be69ba608c09324"},
+    {file = "cloudquery_plugin_sdk-0.1.54.tar.gz", hash = "sha256:5cb7c2ca98eab4b590d3603b42a28351cb0712c0d9e38beffb15271c65e3ecc8"},
 ]
 
 [package.dependencies]
 black = "26.3.1"
-cloudquery-plugin-pb = "0.0.53"
+cloudquery-plugin-pb = "0.0.54"
 exceptiongroup = "1.3.1"
 grpcio = "1.78.0"
 grpcio-tools = "1.78.0"
