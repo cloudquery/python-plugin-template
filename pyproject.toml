@@ -1,22 +1,34 @@
-[tool.poetry]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
 name = "example"
 version = "0.1.0"
 description = ""
-authors = ["Plaintextnerds <tim@plaintextnerds.com>"]
 readme = "README.md"
-packages = [{ include = "plugin" }]
+requires-python = ">=3.11,<3.14"
+authors = [
+    { name = "Plaintextnerds", email = "tim@plaintextnerds.com" },
+]
+dependencies = [
+    "cloudquery-plugin-sdk>=0.1.47",
+    "pydantic>=2.11.7",
+    "pyarrow>=23.0.0",
+    "requests>=2.32.5",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.11,<3.14"
-cloudquery-plugin-sdk = ">=0.1.47"
-pydantic = "^2.11.7"
-pyarrow = "^23.0.0"
-requests = "^2.32.5"
-
-[tool.poetry.scripts]
+[project.scripts]
 main = "main:main"
 
+[dependency-groups]
+dev = [
+    "black>=24.0.0",
+    "pytest>=8.0.0",
+]
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.hatch.build.targets.wheel]
+packages = ["plugin"]
+
+[tool.uv]
+exclude-newer = "1 week"
