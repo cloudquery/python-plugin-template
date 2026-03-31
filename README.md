@@ -72,13 +72,13 @@ Finally, you need to edit the `plugin.py` file to set the plugin name and versio
 
 To test your plugin you can run it locally.
 
-To automatically manage your virtual environment and install the dependencies listed in the `pyproject.toml` you can use `poetry`.
-Poetry is an improved package & environment manager for Python that uses the standardised `pyproject.toml`, if you don't have it installed you can pull it with `pip install poetry`.
+To automatically manage your virtual environment and install the dependencies listed in the `pyproject.toml` you can use `uv`.
+uv is a fast Python package and project manager. To install it, see the [uv installation docs](https://docs.astral.sh/uv/getting-started/installation/).
 
-To install the dependencies into a new virtual environment run `poetry install`.
-If you have additional dependencies you can add them with `poetry add {package_name}` which will add them to the `pyproject.toml` and install them into the virtual environment.
+To install the dependencies into a new virtual environment run `uv sync`.
+If you have additional dependencies you can add them with `uv add {package_name}` which will add them to the `pyproject.toml` and install them into the virtual environment.
 
-Then to run the plugin `poetry run main serve`, which will launch the plugin manually as a GRPC service.
+Then to run the plugin `uv run main serve`, which will launch the plugin manually as a GRPC service.
 
 With that running you can adjust the `TestConfig.yaml` to match your plugin and run `cloudquery sync`.
 This should result in the creation of a sqlite database `db.sqlite` where you can validate your tables are as expected.

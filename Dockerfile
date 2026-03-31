@@ -1,23 +1,20 @@
-# Start from a base image
 FROM python:3.13-slim
 
-# (Optional) Set a working directory
+COPY --from=ghcr.io/astral-sh/uv:0.11.2 /uv /uvx /bin/
+
 WORKDIR /app
 
-# Copy requirements.txt and install the Python dependencies
-COPY pyproject.toml .
-COPY poetry.lock .
-RUN pip3 install --no-cache-dir poetry==2.1.4
-RUN poetry install --no-interaction --no-ansi --no-root
+# Copy dependency files and install
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen --no-dev --no-install-project
 
 # Copy the rest of the code
 COPY plugin plugin
 COPY main.py .
+RUN uv sync --frozen --no-dev
 
-# (Optional) Expose any ports your app uses
 EXPOSE 7777
 
-ENTRYPOINT ["poetry", "run", "main"]
+ENTRYPOINT ["uv", "run", "main"]
 
-# Specify the command to run when the container starts
 CMD ["serve", "--address", "[::]:7777", "--log-format", "json", "--log-level", "info"]

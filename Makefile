@@ -1,8 +1,8 @@
 test:
-	poetry run pytest . -vv
+	uv run pytest . -vv
 
 fmt:
-	poetry run black .
+	uv run black .
 
 fmt-check:
-	poetry run black --check .
+	uv run black --check .
