@@ -12,7 +12,7 @@ authors = [
     { name = "Plaintextnerds", email = "tim@plaintextnerds.com" },
 ]
 dependencies = [
-    "cloudquery-plugin-sdk>=0.1.47",
+    "cloudquery-plugin-sdk>=0.1.57",
     "pydantic>=2.11.7",
     "pyarrow>=23.0.0",
     "requests>=2.32.5",
@@ -32,3 +32,4 @@ packages = ["plugin"]
 
 [tool.uv]
 exclude-newer = "1 week"
+exclude-newer-package = { cloudquery-plugin-sdk = false, cloudquery-plugin-pb = false, certifi = false }
